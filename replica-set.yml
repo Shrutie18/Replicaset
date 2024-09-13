@@ -6,9 +6,7 @@ metadata:
     app: webapp-new
 spec:
   replicas: 5
-  selector:
-    matchLabels:
-      app: webapp-new
+  
   template:
     metadata:
       labels:
@@ -19,3 +17,6 @@ spec:
         image: nginx:latest 
         ports:
         - containerPort: 80
+  selector:
+    matchLabels:
+      app: webapp-new
