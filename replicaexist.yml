@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind:  ReplicaSet
 metadata: 
-       name: webappreplica
+       name: webappreplica9
        labels:
-            app: webappreplica
+            app: webappreplica9
 spec: 
     replicas: 3
     template:
       metadata:  
          labels: 
-            app: webappreplica
+            app: webappreplica9
       spec:
         containers:
             - name: mypod-cont1
