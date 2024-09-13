@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind:  ReplicaSet
 metadata: 
-       name: webappreplica
+       name: webappreplica56
        labels:
-            app: webappreplica
+            app: webappreplica56
 spec: 
     replicas: 4
     template:
       metadata:  
          labels: 
-            app: webappreplica
+            app: webappreplica56
       spec:
         containers:
             - name: mypod-cont1
@@ -24,5 +24,5 @@ spec:
                   protocol: TCP
     selector: 
           matchExpressions: 
-            - {key: app, operator: In, values: [webappreplica, webappreplica2]}
+            - {key: app, operator: In, values: [webappreplica, webappreplica2, webappreplica56]}
             
