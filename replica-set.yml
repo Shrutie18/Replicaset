@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: webappreplica
+  labels:
+    app: webapp-new
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: webapp-new
+  template:
+    metadata:
+      labels:
+        app: webapp-new
+    spec:
+      containers:
+      - name: webapp-container
+        image: nginx:latest 
+        ports:
+        - containerPort: 80
