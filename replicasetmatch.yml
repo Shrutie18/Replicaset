@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind:  ReplicaSet
 metadata: 
-       name: webappreplica3
+       name: webappreplica31
        labels:
-            app: webappreplica3
+            app: webappreplica31
 spec: 
     replicas: 4
     template:
-    metadata:  
-    labels: 
-    app: webappreplica3
-spec:
-     containers:
-            - name: mypod-cont1
-              image: nginx:latest
-              resources: 
-                  requests:
-                    cpu: "50m"
-                    memory: "90Mi"        
-              ports:  
-                - name: http
-                  containerPort: 80
-                  protocol: TCP
+      metadata:  
+        labels: 
+          app: webappreplica31
+      spec:
+          containers:
+                  - name: mypod-cont1
+                    image: nginx:latest
+                    resources: 
+                        requests:
+                          cpu: "50m"
+                          memory: "90Mi"        
+                    ports:  
+                      - name: http
+                        containerPort: 80
+                        protocol: TCP
     selector:
           matchLabels:
                 app: webappreplica3
