@@ -10,7 +10,7 @@ spec:
     metadata:  
     labels: 
     app: webappreplica3
-      spec:
+spec:
      containers:
             - name: mypod-cont1
               image: nginx:latest
