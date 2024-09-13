@@ -12,18 +12,18 @@ spec:
           app: webappreplica31
       spec:
           containers:
-                  - name: mypod-cont1
-                    image: nginx:latest
-                    resources: 
-                        requests:
-                          cpu: "50m"
-                          memory: "90Mi"        
-                    ports:  
-                      - name: http
-                        containerPort: 80
-                        protocol: TCP
+                - name: mypod-cont1
+                  image: nginx:latest
+                  resources: 
+                      requests:
+                        cpu: "50m"
+                        memory: "90Mi"        
+                  ports:  
+                    - name: http
+                      containerPort: 80
+                      protocol: TCP
     selector:
           matchLabels:
-                app: webappreplica3
+                app: webappreplica31
           # matchExpressions: 
           #   - {key: app, operator: In, values: [webappreplica, mobappreplica]}
