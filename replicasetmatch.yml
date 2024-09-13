@@ -5,13 +5,13 @@ metadata:
        labels:
             app: webappreplica3
 spec: 
-    replicas: 5
+    replicas: 4
     template:
-      metadata:  
-               labels: 
-            app: webappreplica3
+    metadata:  
+    labels: 
+    app: webappreplica3
       spec:
-        containers:
+     containers:
             - name: mypod-cont1
               image: nginx:latest
               resources: 
